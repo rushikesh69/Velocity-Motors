@@ -1,1 +1,311 @@
-# Velocity-Motors
+<!DOCTYPEhtml>
+<html>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Geometr415 Blk BT;
+        background-color:black;
+      }
+      .menu {
+        background-color: #333;
+        overflow: hidden;
+      }
+      .menu a {
+        float: left;
+        color: #f2f2f2;
+        padding: 14px 16px;
+        text-align: left;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .menu a:hover {
+        background-color: #ddd;
+        color: #f2f2f2;
+      }
+      .menu a.active {
+        background-color: #621926;
+        color: white;
+      }
+      .intro {
+        height: 1000px;
+        background-image: url(https://wallpapercave.com/wp/wp4384032.jpg);
+        background-size: cover;
+        min-height:700px;
+        max-width:auto;
+        height:auto;
+        object-fit:cover;
+      }
+      .title {
+        position:absolute;
+        text-align: left;
+        top: 3%;
+        right: 2%;
+        font-size: 150% ;
+        color:#f2f2f2;
+      }
+      .cen h1 {
+        font-family: Optima;
+      }
+      .container-1 {
+        display: block;
+        justify-content: space-around;
+        gap: 2em;
+        margin-left: 5pxpx;
+    }
+
+    .services,
+    .contact,
+    .additional-content {
+        flex: 1;
+        background-color:rgb(67, 52, 3);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2em;
+        background-image: url(https://th.bing.com/th/id/OIP.K2TY1L2_BdTQ-k8ArOmLOQHaEo?pid=ImgDet&w=474&h=296&rs=1);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+            }
+            .service img {
+                padding: 70px;
+                max-width: fit-content;
+            }
+    h2 {
+        color: #f2f2f2;
+        border-bottom: 2px solid #343a40;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 1em;
+        color: #f2f2f2;
+    }
+
+    .service-image {
+        max-width: 45%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 1em;
+    }
+
+    form {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.5em;
+        color:#f2f2f2;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 0.5em;
+        margin-bottom: 1em;
+        border: 1px solid #f2f2f2;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #343a40;
+        color:#f2f2f2;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        padding: 0.5em 1em;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color:#f2f2f2;
+    }
+
+    .additional-content h2 {
+        color:#f2f2f2;
+        border-bottom: 2px solid #343a40;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+    }
+
+    .additional-content p {
+        color: #f2f2f2;
+    }
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+  }
+  .container {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .left-column,
+  .right-column {
+      padding: 80px;
+      text-align: left;
+      top: 100%;
+      background:gray;
+      color: white;
+      border-left-style: 3px solid red;
+      flex-basis: 48%; 
+      padding: 20px;
+  }
+  ul {
+      display: block;
+      list-style-type: disc;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 40px;
+    }
+    li {
+      list-style: none;
+    }
+</style>
+<body>
+  <div class="menu">
+    <a  href="file:///C:/Users/E-216-04/Downloads/finalh.html" id="home">HOME</a>
+    <a href="file:///C:/Users/E-216-04/Downloads/reg.html">DELARSHIP</a>
+    <a class="active" href="file:///C:/Users/E-216-04/Downloads/2ndpage.html">SERVICES</a>
+    <a href="file:///C:/Users/E-216-04/Downloads/Gallerycar.html">GALLERY</a>
+  </div>
+  <div class="intro"></div>
+  <div class="title">
+    <pre><h1>Enhance your ride with our
+diverse services</h1>
+</pre>
+  </div>
+  <div class="container-1">
+    <div class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>
+                <img src="https://lambstire.com/wp-content/uploads/sites/12/2021/05/Oil-Change.jpg" alt="Oil Change" class="service-image">
+                <p>Oil Change - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo eu justo ultrices tincidunt.</p>
+            </li>
+            <li>
+                <img src="https://th.bing.com/th/id/R.f69c3ac959988893ba6b8f8aedb50e48?rik=Vkpk15vUJGuS2w&riu=http%3a%2f%2fcaseyautomotive.com%2fwp-content%2fuploads%2fbrake-repair-2.jpg&ehk=DTCyxp8KWjPtV5iBVhEDfGb3reTkYKwOhDwI0CYdI0c%3d&risl=&pid=ImgRaw&r=0" alt="Brake Inspection and Repair" class="service-image">
+                <p>Brake Inspection and Repair - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo eu justo ultrices tincidunt.</p>
+            </li>
+            <li>
+                <img src="https://www.bauerbuilt.com/wp-content/uploads/2020/07/Tire-repair.jpeg" alt="Tire Rotation" class="service-image">
+                <p>Tire Rotation - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo eu justo ultrices tincidunt.</p>
+            </li>
+            <li>
+                <img src="https://th.bing.com/th/id/R.06f5e3668f15445dfb35de97740b1eec?rik=a7ncM%2f8Odj7AtA&riu=http%3a%2f%2fwww.northallertonservicecentre.co.uk%2fwp-content%2fuploads%2f2014%2f08%2fshutterstock_128536448-1024x682.jpg&ehk=HAsK149cPsF%2f8y87QV4Lj5pCNlf1wWHSL58A1MJ5ih0%3d&risl=&pid=ImgRaw&r=0" alt="Engine Diagnostic" class="service-image">
+                <p>Engine Diagnostic - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo eu justo ultrices tincidunt.</p>
+            </li>
+            <li>
+                <img src="https://starlightautomotive.com/storage/pzGFC9RSX9P7jk3SI6wkCKpQvAM1kwnNRP6nLjm1.jpg" alt="Fluid Checks and Replacements" class="service-image">
+                <p>Fluid Checks and Replacements - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo eu justo ultrices tincidunt.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+        <p>Our customer-centric approach ensures that your concerns are addressed promptly and professionally. We prioritize transparency and open communication, ensuring you are well-informed about the status of your vehicle throughout the service process. Your satisfaction and the optimal performance of your car are our primary goals, and we strive to exceed your expectations with our reliable and efficient services.</p>
+
+        <p>Visit our state-of-the-art facility or contact us through the provided form, and let us take care of your car's maintenance needs. We look forward to serving you and keeping your vehicle in peak condition for a smooth and enjoyable driving experience.</p>
+        <p>Feel free to reach out to us for any inquiries or to schedule an appointment. Our team is here to assist you!</p>
+        <hr>
+        <div>
+            <h2>Visit Our Location</h2>
+            <p>We are conveniently located at 123 Service Street, Cityville. Stop by for quality car servicing and maintenance.</p>
+        </div>
+    
+    
+    </div>
+</div>
+<br><br><br>
+<div class="container">
+  <div class="left-column">
+      <section>
+          <h2 style="color: black;">About Me</h2>
+          <ul>
+              <li class="undefined">about</li>
+              <li class="undefined">Careers With us</li>
+              <li class="undefined">Terms & Condition</li>
+              <li class="undefined">Privacy Policy</li>
+              <li class="undefined">Corporate POlicies</li>
+              <li class="undefined">Investors</li>
+              <li class="undefined">FAQs</li>
+            </ul>
+      </section>
+
+      <section>
+          <h2 style="color: black;">Popular Searches</h2>
+          <ul>
+              <li class="undefined">Check challan</li>
+              <li class="undefined">Cars Pricing</li>
+              <li class="undefined">Sell Used car</li>
+              <li class="undefined">Vehical ownership Transfer</li>
+              <li class="undefined">Car valuation</li>
+          </ul>
+      </section>
+  </div>
+  <div class="right-column">
+      <section>
+          <h2 style="color: black;">Contact Us</h2>
+          <ul>
+              <li class="undefined">Feedback</li>
+              <li class="undefined">Contact Us</li>
+              <li class="undefined">Advertise with us</li>
+          </ul>
+      </section>
+      <section>
+          <h2 style="color: black;">Others</h2>
+          <ul>
+              <li class="undefined">Health Insuarnce</li>
+              <li class="undefined">Terms Insuarnce</li>
+              <li class="undefined">Life Insuarnce</li>
+              <li class="undefined">Crack ED</li>
+              <li class="undefined">Personal Loan</li>
+              <li class="undefined">Tyre Dekho</li>
+              <li class="undefined">Emergancy Response</li>
+              <li class="undefined">Service Insuarnce</li>
+              <li class="undefined">CAR Insuarnce</li>
+            </ul>
+      </section>
+  </div>
+</div>
+<div class="footer">
+  <p>© Auroa Automotives.</p>
+</div>
+
+
+</body>
+</html>
+</html>
