@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Inventory</title>
+  <style>
+    body {
+      font-family: Geometr415 Blk BT;
+      background-color:white;
+    }
+    .menu {
+      background-color: #333;
+      overflow: hidden;
+    }
+    .menu a {
+      float: left;
+      color: #f2f2f2;
+      padding: 14px 16px;
+      text-align: left;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .menu a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    .menu a.active {
+      background-color: #621926;
+      color: white;
+    }
+    .intro {
+      height: 1000px;
+      background-image: url(https://images.drive.com.au/caradvice/image/private/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/g5hubwl8e6ceo71lljnb);
+      background-size: cover;
+      min-height:700px;
+      max-width:auto;
+      height:auto;
+      object-fit:cover;
+    }
+    .cen {
+      position:absolute;
+      text-align: left;
+      top: 14%;
+      left: 2%;
+      font-size: 350% ;
+      color:white;
+      
+    }
+    .carinve {
+      text-align: center;
+      border: 2px solid black;
+      border-style: groove;
+      background-color: gray;
+    }
+    .container {
+      display: inline-block;
+      margin-left: 10px;
+
+    }
+    .card {
+      background-color: #FEF6E1;
+      padding: 5px 5px 5px 5px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      display: inline-block;
+      width: 420px;
+      height: auto;
+      margin-left: 45px;
+      }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card h3 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+       margin-left: 5px;
+    }
+    .card p {
+      margin-left: 5px;
+    }
+        .new {
+      position:absolute;
+      text-align: left;
+      top: 120%;
+      left: 20%;
+      font-size: 350% ;
+      color:white;
+      
+    }
+    .sprt {
+      position:absolute;
+      text-align: left;
+      top: 186%;
+      left: 38%;
+      font-size: 350% ;
+      color:white;
+      
+    }
+    .lux {
+      position:absolute;
+      text-align: left;
+      top: 256%;
+      left: 34%;
+      font-size: 350% ;
+      color:white;
+      
+    }
+    .hyp {
+      position:absolute;
+      text-align: left;
+      top: 316%;
+      left: 38%;
+      font-size: 350% ;
+      color:white;
+      
+    }
+    .jdm {
+      position:absolute;
+      text-align: left;
+      top: 386%;
+      left: 30%;
+      font-size: 350% ;
+      color:white;
+    }  
+    .abc {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .reg {
+      padding: 16px;
+      height: 56%;
+      width: 100%;
+      color: white;
+  }
+  .reg h1{
+    text-align: center;
+    border-style: 3px solid red ;  }
+  .reg p {
+    text-align: center;
+  }
+  input[type=text], input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+  }
+  input[type=tel] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  #lname{
+    width: 35%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  #fname {
+    width: 35%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  .s {
+    width: 10%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  .r {
+    width: 10% ;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1
+  }
+  input[type=text]:focus, input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+  }
+  hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+  }
+  
+  .registerbtn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+  }
+  
+  .registerbtn:hover {
+      opacity: 1;
+  }
+  
+  a {
+      color: dodgerblue;
+  }
+  
+  .signin {
+      background-color: #f1f1f1;
+      text-align: center;
+  }
+
+  .header {
+    padding: 80px;
+    text-align: left;
+    top: 100%;
+    background:gray;
+    color: white;
+    border-left-style: 3px solid red;
+    }
+  
+  .header h1 {
+    font-size: 15px;
+    text-align: left;
+  }
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  li {
+    list-style: none;
+  }
+   .cen8 {
+      position:absolute;
+      text-align: left;
+      top: 25%;
+      left: 3%;
+      font-size: 150% ;
+      color:white;
+      
+    }
+   .lat {
+     
+      background-image: url(https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/16q2/667349/2016-lamborghini-aventador-lp750-4-superveloce-test-review-car-and-driver-photo-667354-s-original.jpg?fill=16:9&resize=1200:*);
+      min-height:600px;
+      max-width: 2050px;
+      height: 800px;
+      object-fit:cover;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+      margin-left: 50px;
+      margin-right: auto;
+
+
+    }
+     .lat1 {
+      
+      background-image: url(https://hips.hearstapps.com/hmg-prod/images/p90508471-highres-rolls-royce-ghost-ex-copy-64dbcad7a198e.jpg?crop=0.596xw:0.373xh;0.173xw,0.443xh&resize=1200:*);
+      min-height:600px;
+      max-width: 3050px;
+      height: 1600;
+      object-fit:cover;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+      margin-left: 50px;
+      margin-right: auto;
+
+
+    }
+    .lat2 {
+      
+      background-image: url(https://robbreport.com/wp-content/uploads/2016/08/01-mclaren-p11.jpg?w=991);
+      min-height:600px;
+      max-width: 3050px;
+      height: 1300;
+      object-fit:cover;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+      margin-left: 50px;
+      margin-right: auto;
+
+
+    }
+     .lat3 {
+      
+      background-image: url(https://hips.hearstapps.com/hmg-prod/images/mo18-r0144-035-1532452639.jpg);
+      min-height:600px;
+      max-width: 3050px;
+      height: 1300;
+      object-fit:cover;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+      margin-left: 50px;
+      margin-right: auto;
+
+
+    }
+
+
+    </style>
+</head>
+<body> 
+<div class="menu">
+    <a class="active" href="file:///C:/Users/E-216-04/Downloads/finalh.html" id="home">HOME</a>
+    <a href="file:///C:/Users/E-216-04/Downloads/reg.html">DELARSHIP</a>
+    <a href="file:///C:/Users/E-216-04/Downloads/2ndpage.html">SERVICES</a>
+    <a  href="file:///C:/Users/E-216-04/Downloads/Gallerycar.html">GARAGE</a>
+
+  </div>
+ 
+  <div class="intro"></div>
+  <div class="cen">Velocity Motors</div>
+  <div class="cen8">Elegance with Power</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="lat"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br> 
+  <br>
+  <div class="sprt">SPORTS CARS</div>
+  <div class="container">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Chevrolet_Corvette_C8_IAA_2021_1X7A0156.jpg">
+      <p>Corvette 8</p>
+      <p>Price from $250,000</p>
+      <p>4.0 L 6-cylinder</p>
+      <p>502 horsepower</p>
+      <br>
+  <br>
+  <br> 
+  <br>
+
+    </div>
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/wayfort/images/0/0e/2023_SSC_Tuatara_Striker.png/revision/latest/scale-to-width-down/1200?cb=20231223004028"></img>
+      <p>SSC Tuatara</p>
+      <p>Price from $1,600,000.</p>
+      <p>5.9 L Twin-turbo V8</p>
+      <p>1,750 hp</p>
+       <br>
+  <br>
+  <br> 
+  <br>
+
+    </div>
+    <div class="card">
+    <img src="https://images-porsche.imgix.net/-/jssmedia/32894B50E39A433FAF24D10934EA1335_1543452D62E44DAE83146669DDD67FF8_20230907-PorscheGT3RR_3-4FrontLow_1920x1080"></img>
+    <p>Porche 911 GT3 Rennesport</p>
+    <p>Limited edition </p>
+    <p>Price from $1,500,000</p>
+    <p>611 hp</p>
+    <br>
+  <br>
+  <br> 
+  <br>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="lat1"></div>
+    <br>
+    <br> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="lux">LUXURY CARS</div>
+    <div class="card">
+    <img src="https://ev-database.org/img/auto/BMW_i7_2022/BMW_i7_2022-01.jpg">       </img>
+    <p>BMW i7</p>
+    <p>536.40bhp & 745Nm</p>
+    <p>560 to 590 km Range</p>
+    <p>Price from  $105,700 </p>
+    <br>
+  <br>
+  <br> 
+  <br>
+
+    </div>
+    <div class="card">
+    <img src="https://images.moneycontrol.com/static-mcnews/2021/06/Mercedes-Benz-S-class_-Exterior-6-653x435.jpeg?impolicy=website&width=1600&height=900"></img>
+    <p>Mercedes s-Class</p>
+    <p>Price from  $129,300</p>
+    <p>4.0 L Twin-turbo V8</p>
+    <p>500 hp 6100rpm</p>
+    <br>
+  <br>
+  <br> 
+  <br>
+
+    </div>
+    <div class="card">
+    <img src="https://www.topgear.com/sites/default/files/2023/03/Continental%20GT%20and%20GTC%20S%20-%201.jpg"></img>
+    <p>Bentley Continental GT</p>
+    <p>Price from $370,050</p>
+    <p>twin-turbocharged 4.0 L V8</p>
+    <p>740 hp</p>
+    <br>
+  <br>
+  <br> 
+  <br>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="lat2"></div>
+    <br>
+    <br>
+    <br> 
+    <br>
+    <br>
+    <div class="hyp">HYPER CARS</div>
+    <div class="card">
+    <img src="https://cdnb.artstation.com/p/assets/images/images/030/800/253/large/diego-rojas-eb-bugatti-divo-2020.jpg?1601678502"></img>
+    <p>Bugatti Divo</p>
+    <p>Price from $5,800,000</p>
+    <p>8.0-L turbocharged W16</p>
+    <p>1,500 hp</p>
+    <br>
+  <br>
+  <br> 
+  <br>
+
+    </div>
+    <div class="card">
+    <img src="https://www.topgear.com/sites/default/files/images/news-article/2019/09/1c53561be33d1b74a60e02047f9f37a9/jeskolucerne-stevenwade-3.jpg"></img>
+    <p>koenigsegg Jesko</p>
+    <p>Price fromm $3,000,000</p>
+    <p>5.0-L twin turbo charged V8</p>
+    <p>1600 hp </p>
+    <br>
+  <br>
+  <br> 
+  <br>
+
+    </div>
+    <div class="card">
+    <img src="https://media.gq-magazine.co.uk/photos/6405fb643e977a7efb8a7764/master/pass/Aston-Martin-Valkyrie-HED.jpg"></img>
+    <p>Aston Martin Valkyrie</p>
+    <p>Price from $4,900,000</p>
+    <p>6.5-L V12</p>
+    <p>1200 hp</p>
+    <br>
+  <br>
+  <br> 
+  <br>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="lat3"></div>
+    <br>
+    <br>
+    <br>
+    <br> 
+    <br>
+    <br>
+    <div class="jdm">LIMITED EDITIONS</div>
+    <div class="card">
+    <img src="https://www.thedrive.com/uploads/2023/12/07/r34-skyline-gt-r-2.jpg?auto=webp">
+    <p>Nissan GTR34</p>
+    <p>Price from $1,000,000</p>
+    <p>Swapped 4.0-L V8</p>
+    <p>820 hp</p>
+    <br>
+  <br>
+  <br> 
+  <br>
+
+    </div>
+    <div class="card">
+    <img src="https://global.discourse-cdn.com/forza/original/4X/b/8/b/b8bf548705bd37a8e1077c02275627a555070535.jpeg">
+    <p>Honnicorn Mustang</p>
+    <p>Price $10,000,000</p>
+    <p>1/1 in world </p>
+    <p>1100 hp</p>
+    <br>
+  <br>
+  <br> 
+  <br>
+
+    </div>
+    <div class="card">
+    <img src="https://e0.pxfuel.com/wallpapers/892/726/desktop-wallpaper-artstation-han-s-mazda-rx7-veilside-rose.jpg">
+    <p>Mazda Rx7</p>
+    <p>Price $12,000,000</p>
+    <p>1/3 in world</p>
+    <p>1000 hp</p>
+    <br>
+  <br>
+  <br> 
+  <br>
+
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="abc">
+    <form>
+      <div class="reg">
+        <h1>Register</h1>
+        <p>Fill following  fields to register:</p><br>
+        <hr>
+        <label for="fname"><b>First Name</b></label>
+        <input type="text" placeholder="Enter First  Name" name="fname" id="fname" required>
+
+        <label for="lname"><b>last Name</b></label>
+        <input type="text" placeholder="Enter last  Name" name="lname" id="lname" required>
+        <br>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+        <label for="address"><b>address</b></label>
+        <input type="text" placeholder="Enter address" name="address" id="address" required>
+
+        <label for="phone-num"><b>Enter a phone</b></label>
+        <input type="tel" placeholder="Entre your Phone number" name="phone-num" id="phone-num" maxlength="10">
+
+
+        <hr>
+    
+
+        <button type="submit" class="registerbtn">Register</button>
+        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    </div>
+  </div>
+  </form>
+  <br>
+  <div class="header">
+    <h1>About Auroa Vechicles</h1>
+    <ul>
+      <li class="undefined">about</li>
+      <li class="undefined">Careers With us</li>
+      <li class="undefined">Terms & Condition</li>
+      <li class="undefined">Privacy Policy</li>
+      <li class="undefined">Corporate POlicies</li>
+      <li class="undefined">Investors</li>
+      <li class="undefined">FAQs</li>
+    </ul>
+    
+      <h1>Contact Us</h1>
+      <ul>
+        <li class="undefined">Feedback</li>
+        <li class="undefined">Contact Us</li>
+        <li class="undefined">Advertise with us</li>
+      </ul>
+    <div class="contact">
+      <h1>OTHERS</h1>
+      <ul>
+        <li class="undefined">Health Insuarnce</li>
+        <li class="undefined">Terms Insuarnce</li>
+        <li class="undefined">Life Insuarnce</li>
+        <li class="undefined">Crack ED</li>
+        <li class="undefined">Personal Loan</li>
+        <li class="undefined">Tyre Dekho</li>
+        <li class="undefined">Emergancy Response</li>
+        <li class="undefined">Service Insuarnce</li>
+        <li class="undefined">CAR Insuarnce</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
